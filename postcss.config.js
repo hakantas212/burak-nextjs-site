@@ -16,5 +16,7 @@ module.exports = {
         ]
       : undefined,
     'postcss-preset-env',
+    require('tailwindcss'),
+    require('autoprefixer'),
   ],
 }
