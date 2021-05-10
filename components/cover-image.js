@@ -7,10 +7,10 @@ export default function CoverImage({ title, url, slug }) {
     <Image
       src={url}
       alt={`Cover Image for ${title}`}
-      layout="intrinsic"
-      width={700}
-      height={475}
-      quality={100}
+      width={16}
+      height={9}
+      layout="responsive"
+      quality={65}
       className={cn('shadow-small', {
         'hover:shadow-medium transition-shadow duration-200': slug,
       })}

@@ -3,6 +3,7 @@ import Intro from '../components/intro'
 import Header from '../components/header'
 import Layout from '../components/layout'
 import { fetchAboutEntries } from '../lib/introContentful'
+import Image from 'next/image'
 
 export default function About({about}) {
 
@@ -12,6 +13,15 @@ export default function About({about}) {
         <Container>
         <Header />
           <div className="flex flex-col">
+          <Image 
+            src={`https:${about.profilePicture.fields.file.url}`}
+            alt={`profile image`}
+            width={150}
+            height={150}
+            layout="fixed"
+            quality={65}
+            className="max-w-xs overflow-hidden rounded-lg shadow-lg"
+          />
             {
               <Intro title={about.heroText} subtitle={about.aboutMe} />
             }
@@ -27,6 +37,7 @@ export default function About({about}) {
 
 export async function getStaticProps() {
   const about = await fetchAboutEntries()
+  console.log(about.items[0].fields)
   return {
     props: {
       about: about.items[0].fields
