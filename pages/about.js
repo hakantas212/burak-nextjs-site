@@ -2,9 +2,9 @@ import Container from '../components/container'
 import Intro from '../components/intro'
 import Header from '../components/header'
 import Layout from '../components/layout'
-import { fetchEntries } from '../lib/introContentful'
+import { fetchAboutEntries } from '../lib/introContentful'
 
-export default function Index({res}) {
+export default function About({about}) {
 
   return (
     <>
@@ -13,22 +13,23 @@ export default function Index({res}) {
         <Header />
           <div className="flex flex-col">
             {
-              <Intro title={res.introTitle} subtitle={res.subtitle} />
+              <Intro title={about.heroText} subtitle={about.aboutMe} />
             }
           </div>
-
-          
         </Container>
       </Layout>
     </>
   )
 }
 
+
+
+
 export async function getStaticProps() {
-  const res = await fetchEntries()
+  const about = await fetchAboutEntries()
   return {
     props: {
-      res: res.fields
+      about: about.items[0].fields
     },
   }
 }

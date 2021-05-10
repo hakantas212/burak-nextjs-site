@@ -13,7 +13,7 @@ export default function PostPreview({
 }) {
   return (
     <div>
-      <div className="mb-5">
+      <div className="mb-5 relative w-6/12 relative h-full">
         <CoverImage title={title} slug={slug} url={coverImage.url} />
       </div>
       <h3 className="text-3xl mb-3 leading-snug">

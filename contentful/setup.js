@@ -1,9 +1,9 @@
 const spaceImport = require('contentful-import')
 const exportFile = require('./export.json')
 
-const [CONTENTFUL_SPACE_ID, CONTENTFUL_MANAGEMENT_TOKEN] = process.argv.slice(2)
+const [NEXT_PUBLIC_CONTENTFUL_SPACE_ID, CONTENTFUL_MANAGEMENT_TOKEN] = process.argv.slice(2)
 
-if (!CONTENTFUL_SPACE_ID || !CONTENTFUL_MANAGEMENT_TOKEN) {
+if (!NEXT_PUBLIC_CONTENTFUL_SPACE_ID || !CONTENTFUL_MANAGEMENT_TOKEN) {
   throw new Error(
     [
       'Parameters missing...',
@@ -14,7 +14,7 @@ if (!CONTENTFUL_SPACE_ID || !CONTENTFUL_MANAGEMENT_TOKEN) {
 }
 
 spaceImport({
-  spaceId: CONTENTFUL_SPACE_ID,
+  spaceId: NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
   managementToken: CONTENTFUL_MANAGEMENT_TOKEN,
   content: exportFile,
 })
