@@ -18,6 +18,7 @@ export default function About({about}) {
             alt={`profile image`}
             width={150}
             height={150}
+            priority={true}
             layout="fixed"
             quality={65}
             className="max-w-xs overflow-hidden rounded-lg shadow-lg"
@@ -37,7 +38,6 @@ export default function About({about}) {
 
 export async function getStaticProps() {
   const about = await fetchAboutEntries()
-  console.log(about.items[0].fields)
   return {
     props: {
       about: about.items[0].fields
