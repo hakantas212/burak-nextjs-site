@@ -1,2 +1,2 @@
 [build]
-  command = "npm build"
+  command = "next build"
