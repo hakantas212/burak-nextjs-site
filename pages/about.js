@@ -16,10 +16,10 @@ export default function About({about}) {
           <Image 
             src={`https:${about.profilePicture.fields.file.url}`}
             alt={`profile image`}
-            width={150}
-            height={150}
+            width={10}
+            height={10}
             priority={true}
-            layout="fixed"
+            layout="responsive"
             quality={65}
             loading="eager"
             className="max-w-xs overflow-hidden rounded-lg shadow-lg"
