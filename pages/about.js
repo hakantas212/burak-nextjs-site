@@ -16,15 +16,13 @@ export default function About({about}) {
           <Image 
             src={`https:${about.profilePicture.fields.file.url}`}
             alt={`profile image`}
-            width={10}
-            height={10}
+            width={150}
+            height={150}
             priority={true}
-            layout="responsive"
-            quality={65}
-            loading="eager"
+            layout="fixed"
+            quality={100}
             className="max-w-xs overflow-hidden rounded-lg shadow-lg"
           />
-            <img src={`https:${about.profilePicture.fields.file.url}`} width="150" height="150" />
             {
               <Intro title={about.heroText} subtitle={about.aboutMe} />
             }
