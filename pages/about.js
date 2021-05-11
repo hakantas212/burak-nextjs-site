@@ -21,6 +21,7 @@ export default function About({about}) {
             priority={true}
             layout="fixed"
             quality={65}
+            loading="eager"
             className="max-w-xs overflow-hidden rounded-lg shadow-lg"
           />
             {
