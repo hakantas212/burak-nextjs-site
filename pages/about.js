@@ -24,6 +24,7 @@ export default function About({about}) {
             loading="eager"
             className="max-w-xs overflow-hidden rounded-lg shadow-lg"
           />
+            <img src={`https:${about.profilePicture.fields.file.url}`} width="150" height="150" />
             {
               <Intro title={about.heroText} subtitle={about.aboutMe} />
             }
