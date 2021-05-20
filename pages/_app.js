@@ -2,10 +2,22 @@ import '../styles/index.css'
 import { Context } from "../lib/context.js"
 import { fetchFooter, fetchHeader } from '../lib/introContentful';
 import {useState, useEffect} from "react"
+import * as gtag from '../lib/gtag'
 
 
 function MyApp({ Component, pageProps }) {
   const [data, setData] = useState({header: [], footer: []});
+
+  const router = useRouter()
+  useEffect(() => {
+    const handleRouteChange = (url) => {
+      gtag.pageview(url)
+    }
+    router.events.on('routeChangeComplete', handleRouteChange)
+    return () => {
+      router.events.off('routeChangeComplete', handleRouteChange)
+    }
+  }, [router.events])
 
   useEffect(() => {
     const fetchData = async () => {
