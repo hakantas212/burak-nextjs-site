@@ -10,13 +10,13 @@ export default function Header() {
           <h1 className="text-6xl md:text-8xl font-bold tracking-tighter leading-tight md:pr-8">
           <Link href="/">
             <a>
-            {<img className="object-contain h-auto w-20" src={data.logo}></img>}
+            {<img className="object-contain h-auto w-20" src={data.header.logo}></img>}
             </a>
           </Link>
           </h1>
       </section>
       <section className="flex-1 flex justify-end">
-      {data.menuItem && data.menuItem.map((menuLink, index) => (
+      {data.header.menuItem && data.header.menuItem.map((menuLink, index) => (
             <Link key={index} href={`/${menuLink.fields.linkUrl}`}>
             <a className="ml-16" >{menuLink.fields.linkName}</a>
         </Link>

@@ -1,26 +1,27 @@
 import '../styles/index.css'
 import { Context } from "../lib/context.js"
-import { fetchHeader } from '../lib/introContentful';
+import { fetchFooter, fetchHeader } from '../lib/introContentful';
 import {useState, useEffect} from "react"
 
 
-
-
-
 function MyApp({ Component, pageProps }) {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState({header: [], footer: []});
 
   useEffect(() => {
     const fetchData = async () => {
-      const result = await fetchHeader()
-      .then(response => response.fields)
-      console.log(result)
+      const header = await fetchHeader()
+      const footer = await fetchFooter()
       setData({
-        logo: result.logo.fields.file.url,
-        menuItem: result.menuItem
+        footer: {
+        email: footer.items[0].fields.email,
+        footerLinks: footer.items[0].fields.socialMedia.fields,
+        footerContent: footer.items[0].fields.footerContent
+        }, 
+        header:{ 
+          logo: header.fields.logo.fields.file.url,
+          menuItem: header.fields.menuItem
+        }
       })
-      return result
-      
     };
  
     fetchData();
