@@ -1,6 +1,7 @@
 import '../styles/index.css'
 import { Context } from "../lib/context.js"
 import { fetchFooter, fetchHeader } from '../lib/introContentful';
+import { useRouter } from 'next/router'
 import {useState, useEffect} from "react"
 import * as gtag from '../lib/gtag'
 
