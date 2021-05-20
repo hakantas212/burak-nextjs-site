@@ -19,6 +19,7 @@ function MyApp({ Component, pageProps }) {
         }, 
         header:{ 
           logo: header.fields.logo.fields.file.url,
+          logoAlt:header.fields.logo.fields.description,
           menuItem: header.fields.menuItem
         }
       })

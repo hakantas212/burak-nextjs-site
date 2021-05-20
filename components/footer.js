@@ -24,7 +24,7 @@ export default function Footer() {
           }
           {
             <a className="p-0 mx-4 w-12 h-12" href={`mailto:${data.footer.email}`}>
-              <svg width="100" height="80" xmlns="http://www.w3.org/2000/svg" className="bg-transparent object-contain flex items-center text-blue-700 border-blue-500" fill="none" viewBox="0 0 40 40" stroke="currentColor">
+              <svg width="100px" height="80px" xmlns="http://www.w3.org/2000/svg" className="bg-transparent object-contain flex items-center text-blue-700 border-blue-500" fill="none" viewBox="0 0 40 40" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
             </a> 

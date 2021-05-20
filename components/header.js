@@ -10,7 +10,7 @@ export default function Header() {
           <h1 className="text-6xl md:text-8xl font-bold tracking-tighter leading-tight md:pr-8">
           <Link href="/">
             <a>
-            {<img  alt="personal logo"className="object-contain h-auto w-20" src={data.header.logo}></img>}
+            {<img alt={data.header.logoAlt} className="object-contain h-auto w-20" src={data.header.logo}></img>}
             </a>
           </Link>
           </h1>
