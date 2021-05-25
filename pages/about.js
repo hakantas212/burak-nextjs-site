@@ -11,6 +11,7 @@ export default function About({about}) {
     <>
       <Layout >
         <Container>
+          
         <Header />
           <div className="flex flex-col">
           <Image 
@@ -33,9 +34,6 @@ export default function About({about}) {
   )
 }
 
-
-
-
 export async function getStaticProps() {
   const about = await fetchAboutEntries()
   return {
@@ -44,5 +42,6 @@ export async function getStaticProps() {
     },
   }
 }
+
 
 
