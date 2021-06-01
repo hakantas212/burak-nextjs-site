@@ -30,4 +30,7 @@ module.exports = {
       },
     },
   },
+  variants: {
+    whitespace: ['responsive'],
+  },
 };

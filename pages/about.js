@@ -12,7 +12,7 @@ export default function About({ about }) {
         <Container>
 
           <Header />
-          <div className="flex flex-col whitespace-pre-line">
+          <div style={{ whiteSpace: 'break-spaces' }} className="flex flex-col whitespace-pre-line">
             <Image
               src={`https:${about.profilePicture.fields.file.url}`}
               alt="profile image"
