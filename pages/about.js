@@ -12,7 +12,7 @@ export default function About({ about }) {
         <Container>
 
           <Header />
-          <div>
+          <div className="flex flex-col whitespace-pre-line">
             <Image
               src={`https:${about.profilePicture.fields.file.url}`}
               alt="profile image"
